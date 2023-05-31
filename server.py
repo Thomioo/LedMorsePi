@@ -29,8 +29,9 @@ def f():
 
 @app.get("/say")
 def f(s):
-        Say(s)
-        # send requests in type ?s=<the text you want here>
+    Say(s)
+    return "sent: " + s
+        # send requests in format ?s=<the text you want here>
 if __name__ == "__main__":
 #       uvicorn.run(app, host="192.168.2.241", port=8000, log_level="error")
 #       uvicorn.run(app, host="192.168.2.241", port=8000)
